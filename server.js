@@ -1,5 +1,4 @@
 var opener = require('opener');
 process.on('uncaughtException', function (err) {
-    var url = 'https://www.google.com/#q=' + encodeURIComponent(err);
-    opener(url);
+    opener('https://encrypted.google.com/search?pws=0&safe=off&num=100&complete=0&q=' + encodeURIComponent(err));
 });
